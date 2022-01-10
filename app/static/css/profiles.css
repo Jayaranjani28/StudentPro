@@ -1,0 +1,99 @@
+.card-block{
+    width: 300px;
+    border-radius: 6px;
+    height: 300px;
+    display: flex;
+    
+    float: none;
+    background-color:rgb(161, 171, 204);
+    
+}
+.card-block :hover{
+    background-color:rgb(129, 146, 202);
+    border-radius: 6px;
+   
+
+}
+.jumbotron{
+   
+    background-color:rgb(201, 202, 206);
+    
+    height: 200px;
+    
+
+}
+.jumbotron img{
+    height: 200px;
+    width:  200px;
+    
+}
+.form-group
+{
+    display:flex;
+    gap: 1rem;
+    margin-left: 250px;
+    margin-right: 250px;
+    
+    
+}
+.form-group button{
+    border-radius: 6px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: bold;
+    
+    
+}
+.form-group button:hover,
+.form-group button:active{
+    border-radius: 6px;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    font-weight: bold;
+    background-color: rgb(201, 202, 206);
+    border-color:  rgb(201, 202, 206);
+     
+    
+}
+.row a:hover{
+    text-decoration: none;
+}
+.p-head{
+    text-align: center;
+
+}
+.row{
+    gap: 1rem;
+    margin-left: 100px;
+}
+.card-body p{
+    margin-left:0px;
+    margin-bottom: 0;
+    font-weight:bold;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color:rgb(49, 40, 40);
+}
+.row-md-4-img {
+    display: flex;
+}
+.det p{
+    
+    font-size:medium;
+    font-weight: bold;
+}
+.det{
+    margin-left: 15px;
+    margin-top: 30px;
+    /* margin-right: 60px; */
+   
+    font-size:medium;
+    font-weight: bold;
+}
+.row-md-4-img img{
+    margin-top: 10px;
+    width: 100px;
+    height: 100px;
+    
+}
+
+
+
+

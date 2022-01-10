@@ -1,0 +1,33 @@
+{% extends 'student/base.html' %}
+{% load static %}
+{% block css_files %}
+<link rel="stylesheet" href="{% static 'css/profiles.css' %}">
+{% endblock css_files %}
+{% block content %} 
+<div class="jumbotron">
+    <form method="get" action="{% url 'studentdetails' %}">
+        <div class="form-group">
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input" name="search_query">
+            <button type="submit">Search</button>
+        </div>
+    </form>
+</div>
+
+        {% for student in student_details %}
+        
+        <div class="card-block">
+            <div class="det">
+            <a href="{% url 'academicdetails' student.rollno %} "> <p>Name : {{ student.name }} </p></a>
+                    <p>Class : {{ student.classes }} </p>
+                    <p>School : {{ student.school }} </p>
+                    <p>Mobile: {{ student.mobile }} </p>
+                    <p>Address: {{ student.address }} </p>
+                    <a href="">Update</a>
+                    <a href="">Delete</a>
+                   
+                </div>
+                </div>
+        
+        {% endfor %}
+
+{% endblock %}

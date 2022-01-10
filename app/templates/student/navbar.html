@@ -1,0 +1,20 @@
+{% load static %} 
+<link rel="stylesheet" href="{% static 'css/navbar.css' %}">
+
+<header class="header">
+   
+    <ul class="header-menu">
+       
+        {% if user.is_authenticated %}
+             <li class="header-menuitem"><a href="{% url 'addinfo' %}">Edit Profile</a></li>|
+             <li class="header-menuitem"><a href="{% url 'studentdetails' %}">Studentdetails</a></li>|
+             <li class="header-menuitem"><a href="{% url 'logout' %}">Logout</a></li>
+        {% else %}
+            <li class="header-menuitem"><a href="">Login</a></li>
+            
+        {% endif %}
+    </ul>
+    
+</header>
+
+

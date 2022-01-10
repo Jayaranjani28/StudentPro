@@ -1,0 +1,31 @@
+{% extends 'student/base.html' %} 
+{% load static %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/profiles.css' %}">
+    {% endblock css_files %}
+{% block content %} 
+    
+                <div class="card">
+                            
+                            <p class="p-head">{{ academiclist.name }}</p>
+                           
+                            <div class="card-body">
+                                 {% if activity %}
+                                {% for act in academiclist.activities_set.all %}
+                            
+                                    <p>English - {{act.english}} </p>
+                                    <p>Maths - {{act.maths}} </p>
+                                    <p>Physics - {{act.physics}} </p>
+                                    <p>Chemistry - {{act.chemistry}} </p>
+                                    <p>Biology - {{act.biology}} </p>
+                                   
+                                    {% endfor %}
+                                    {% else %}
+                                    <h5>No Acamedic Records</h5>
+                                    {% endif %}
+                                </div>
+                            </div>
+               
+       
+{% endblock %}

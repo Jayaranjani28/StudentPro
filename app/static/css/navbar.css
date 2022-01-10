@@ -1,0 +1,56 @@
+.header{
+    
+    padding: 0.5rem;
+    display: flex;
+    background-color:rgb(161, 159, 159);
+    
+    
+}
+
+.header > .logo{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    margin-right: auto;
+    color: black;
+    font-family:cursive; 
+    font-weight: bold;
+    font-size: larger;
+    display: inline-block;
+}
+.header > ul{
+   display:flex;
+/* justify-content: space-evenly; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: 100px;
+    color:rgb(250, 6, 6);
+    
+}
+
+.header-menuitem{
+    list-style: none;
+   
+
+   
+}
+.header-menuitem a{
+    margin: 30px;
+    font-size:large;
+   color:rgb(20, 20, 20);
+   font-family:Georgia, 'Times New Roman', Times, serif; 
+} 
+.header-menuitem a:hover,
+.header-menuitem a:active{
+    background-color: rgb(40, 109, 173);
+    
+    color:white;
+    border-radius: 6px;
+    padding: 0.5rem;
+    text-decoration: none;
+    
+}
+
+
+ 

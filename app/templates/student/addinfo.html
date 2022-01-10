@@ -1,0 +1,35 @@
+{% extends 'student/base.html' %} 
+{% load static %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'project/profile-form.css' %}">
+    {% endblock css_files %}
+
+
+{% block content %} 
+
+    
+
+    <div class='card'>
+            <div class="edit-icon">
+                <img src="{% static 'images/pencil-square.svg' %} " alt="icon">
+            </div>
+            <h3>Update Account</h3>
+            <form action="{% url 'addinfo' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% for field in form %}
+                    <div class="form-group">
+                        <label> {{ field.label }} </label>
+                        {{ field }}
+                    </div>
+                    {% for error in field.errors %} 
+                    <p style="color:red;"> {{ error }} </p>
+                    {% endfor %}
+                {% endfor %}
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </form>
+            
+    </div>
+
+
+
+{% endblock %}

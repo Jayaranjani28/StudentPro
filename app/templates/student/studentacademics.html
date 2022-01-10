@@ -1,0 +1,27 @@
+{% extends 'student/base.html' %} 
+{% load static %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'css/login_register.css' %}">
+    {% endblock css_files %}
+
+
+{% block content %} 
+
+    
+
+    <div class='card'>
+            <div class="edit-icon">
+                <img src="{% static 'images/pencil-square.svg' %} " alt="icon">
+            </div>
+            <h3>Update Account</h3>
+            <form action="{% url 'addacademics' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <input class="btn btn-primary" type="submit" value="Submit" />
+            </form>
+            
+    </div>
+
+
+
+{% endblock %}
